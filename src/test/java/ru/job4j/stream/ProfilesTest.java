@@ -15,7 +15,9 @@ public class ProfilesTest {
     public void whenGetAddress() {
         List<Profile> listProfiles = List.of(
                 new Profile(new Address("Bryansk", "Pushkina", 10, 77)),
-                new Profile(new Address("Moskva", "Lenina", 12, 4)));
+                new Profile(new Address("Moskva", "Lenina", 12, 4)),
+                new Profile(new Address("Bryansk", "Pushkina", 10, 77)));
+
         Profiles profiles = new Profiles();
         List<Address> rsl = profiles.collect(listProfiles);
         List<Address> expected = new ArrayList<>();
